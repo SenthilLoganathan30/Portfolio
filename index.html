@@ -1973,7 +1973,7 @@
             const description = document.getElementById('hero-description');
             if (!description || description.classList.contains('words-split')) return;
 
-            const text = description.textContent;
+            const text = description.textContent.replace(/\s+/g, ' ').trim();
             const words = text.split(' ');
 
             description.innerHTML = words.map(word =>
@@ -2320,6 +2320,5 @@
 
     </script>
 </body>
-
 
 </html>
