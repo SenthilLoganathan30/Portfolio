@@ -2129,8 +2129,8 @@
                     this.x = Math.random() * canvas.width;
                     this.y = init ? Math.random() * canvas.height : -40;
                     this.size = Math.random() * 18 + 10;
-                    this.speedY = Math.random() * 0.5 + 0.2;
-                    this.speedX = (Math.random() - 0.5) * 0.4;
+                    this.speedY = Math.random() * 1.5 + 0.5; // Increased speed (0.5 to 2.0)
+                    this.speedX = (Math.random() - 0.5) * 1.0; // Increased horizontal drift
                     this.rotation = Math.random() * Math.PI * 2;
                     this.rotationSpeed = (Math.random() - 0.5) * 0.015;
                     this.opacity = Math.random() * 0.2 + 0.05;
@@ -2203,7 +2203,7 @@
 
             // Create petals
             let petals = [];
-            const petalCount = Math.min(20, Math.floor(canvas.width / 80));
+            const petalCount = Math.min(60, Math.floor(canvas.width / 30)); // Increased count
             for (let i = 0; i < petalCount; i++) {
                 petals.push(new Petal());
             }
